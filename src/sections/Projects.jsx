@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { projects } from "../constants";
 import { Github, ExternalLink } from "lucide-react";
 import { fadeIn, textVariant, staggerContainer } from "../utils/motion";
 
 const ProjectCard = ({ index, name, subtitle, description, tags, image, source_code_link, live_link }) => {
+    const [isFlipped, setIsFlipped] = useState(false);
+
     return (
         <motion.div
             variants={fadeIn("up", "spring", index * 0.25, 0.75)}
@@ -14,9 +17,10 @@ const ProjectCard = ({ index, name, subtitle, description, tags, image, source_c
                 whileHover={{ y: -20, scale: 1.03, rotateZ: 1 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 className="w-full h-[500px] perspective-1000 group cursor-pointer relative"
+                onClick={() => setIsFlipped(!isFlipped)}
             >
                 {/* 3D Flipper */}
-                <div className="relative w-full h-full transition-all duration-700 w-full h-full preserve-3d group-hover:rotate-y-180 rounded-2xl">
+                <div className={`relative w-full h-full transition-all duration-700 preserve-3d rounded-2xl group-hover:rotate-y-180 ${isFlipped ? "rotate-y-180" : ""}`}>
 
                     {/* Front Face: Neon Cyber-Glass */}
                     <div className="absolute inset-0 w-full h-full backface-hidden rounded-2xl overflow-hidden backdrop-blur-xl bg-black/40 border border-white/5 shadow-[0_0_30px_rgba(47,75,162,0.3)] flex flex-col justify-between p-5 z-10">
