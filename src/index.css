@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #000000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #f3f3f3;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #E947F5;
+  color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E947F5;
+}
+
+.violet-gradient {
+  background: linear-gradient(#C0C0C0 0%, rgba(192, 192, 192, 0) 100%);
+}
+
+.green-pink-gradient {
+  background: #C0C0C0;
+  background: linear-gradient(90.13deg, #C0C0C0 1.9%, #FFFEA8 97.5%);
+}
+
+.orange-text-gradient {
+  background: linear-gradient(to top, #A9A9A9, #E5E5E5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.green-text-gradient {
+  background: linear-gradient(to top, #D4AF37, #FFFFFF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blue-text-gradient {
+  background: linear-gradient(to top, #8B6508, #F7E98D);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pink-text-gradient {
+  background: linear-gradient(to top, #B8860B, #E5C365);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 3D Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+@keyframes liquid-flow {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes liquid-flow-reverse {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(-180deg) scale(1.2);
+  }
+
+  100% {
+    transform: rotate(-360deg) scale(1);
+  }
+}
+
+.animate-liquid-flow {
+  animation: liquid-flow 25s infinite linear;
+}
+
+
+/* Digital Grid Background Utilities */
+.perspective-grid-container {
+  perspective: 600px;
+}
+
+.bg-grid-gold {
+  background-size: 50px 50px;
+  background-image:
+    linear-gradient(to right, rgba(212, 175, 55, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212, 175, 55, 0.3) 1px, transparent 1px);
+}
+
+.transform-3d-grid {
+  transform: rotateX(60deg);
+  transform-origin: center top;
+}
+
+@keyframes grid-move {
+  0% {
+    transform: rotateX(60deg) translateY(0);
+  }
+
+  100% {
+    transform: rotateX(60deg) translateY(50px);
+  }
+}
+
+.animate-grid-move {
+  animation: grid-move 2s linear infinite;
+}
+
+/* Fade Up Animation */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 1s ease-out forwards;
+}
