@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
 import logo from "../assets/logo-new.png";
-import akhinesh from "../assets/profile-pic.jpg";
+import akhinesh from "../assets/newwww.PNG";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {

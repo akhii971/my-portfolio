@@ -3,6 +3,8 @@ import { StarsCanvas, ComputersCanvas } from "../canvas";
 import MagneticButton from "../components/MagneticButton";
 import TypingText from "../components/TypingText";
 
+
+
 const Hero = () => {
     return (
         <section className="relative w-full h-screen mx-auto overflow-hidden">
@@ -21,14 +23,8 @@ const Hero = () => {
                 <div className="pointer-events-auto z-20 flex flex-col items-center justify-center text-center">
                     <h1 className="text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 font-bold drop-shadow-2xl">
                         Hi, I'm <span className="animate-text-shimmer bg-[linear-gradient(110deg,#E947F5,45%,#fff,55%,#2F4BA2)] bg-[length:250%_100%] bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(233,71,245,0.5)]">Akhinesh KV</span>
-
-
-
                     </h1>
                     <div className="text-white font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] mt-2 h-[80px] drop-shadow-[0_0_5px_rgba(255,255,255,0.4)]">
-
-
-
                         <TypingText texts={["MERN Stack Developer", "Full-Stack Engineer", "React Specialist", "Creative Coder"]} />
                     </div>
 
@@ -39,9 +35,6 @@ const Hero = () => {
                     <div className="mt-8 flex flex-wrap gap-4 justify-center">
                         <MagneticButton className="group relative px-8 py-3 rounded-full font-bold text-white overflow-hidden bg-transparent border border-[#E947F5] shadow-[0_0_15px_rgba(233,71,245,0.3)] hover:shadow-[0_0_30px_rgba(233,71,245,0.6)] transition-all">
                             <div className="absolute inset-0 w-full h-full bg-[#E947F5] opacity-10 group-hover:opacity-20 transition-opacity"></div>
-
-
-
                             <a href="#projects" className="relative z-10 flex items-center gap-2">
                                 View Projects
                             </a>
