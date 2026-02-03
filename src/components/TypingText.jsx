@@ -33,7 +33,7 @@ const TypingText = ({ texts }) => {
 
     return (
         <span
-            className={`font-bold inline-block bg-gradient-to-r from-[#E947F5] via-[#2F4BA2] to-[#E947F5] bg-[length:200%_auto] animate-text-shimmer bg-clip-text text-transparent`}
+            className={`font-bold inline-block text-white `}
         >
             {displayedText}
             <motion.span

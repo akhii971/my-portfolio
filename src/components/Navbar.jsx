@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
 import logo from "../assets/logo-new.png";
-import akhinesh from "../assets/akhinesh-hero-v3.png";
+import akhinesh from "../assets/profile-pic.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
@@ -57,7 +57,7 @@ const Navbar = () => {
                     {/* Profile Photo as Logo */}
                     <div className="relative w-12 h-12">
                         <div className="absolute inset-0 bg-gradient-to-r from-[#E947F5] to-[#2F4BA2] rounded-full blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                        <img src={akhinesh} alt="logo" className="relative w-full h-full object-cover rounded-full border border-white/20 grayscale hover:grayscale-0 brightness-110 contrast-110 group-hover:scale-105 transition-all duration-300" />
+                        <img src={akhinesh} alt="logo" className="relative w-full h-full object-cover object-top rounded-full border border-white/20 grayscale hover:grayscale-0 brightness-110 contrast-110 group-hover:scale-105 transition-all duration-300" />
                     </div>
 
                     <motion.p
